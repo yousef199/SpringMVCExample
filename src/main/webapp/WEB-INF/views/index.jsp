@@ -18,9 +18,9 @@ margin-bottom: 40px;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
-	<form action="/SpringMVCExample/getStudents" id = "showStudents"></form>
+	<form action="/SpringMVCExample/Student/getStudents" id = "showStudents"></form>
 	<div class = "form-group">
-	<form action="/SpringMVCExample/addStudent" method="get" id = "addStudent">
+	<form action="/SpringMVCExample/Student/addStudent" method="get" id = "addStudent">
 		<div class = "col-md-7">
 		<label for ="name" class = "form-label">Enter Name:</label>
 		<input type = "text" name = "name" id = "name" class = "form-control">	<br>	

@@ -18,6 +18,7 @@ import com.yousef.entities.Student;
 import com.yousef.managers.StudentManager;
 
 @Controller
+@RequestMapping(path = "/Student/")
 public class AddController {
 	private final StudentManager studentManager = new StudentManager();
 
@@ -34,11 +35,6 @@ public class AddController {
         return mv;
 	}
 	
-	@RequestMapping(path = "/" , method = RequestMethod.GET)
-	public String welcome() {
-		System.out.println("success");
-		return "index";
-	}
 	
 	
 	@RequestMapping(path = "/getStudents" , method = RequestMethod.GET)
