@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import com.yousef.entities.Student;
 
+@Component
 public class StudentManager {
 	private static EntityManager manager;
 	private static EntityManagerFactory factory;
@@ -37,7 +38,9 @@ public class StudentManager {
 	}
 
 	public void addStudent(Student student) {
+		beginTransaction();
 		manager.persist(student);
+		commitTransaction();
 	}
 
 	public void updateStudent(Student student) {
@@ -56,7 +59,9 @@ public class StudentManager {
 	
 	public List<Student> getAllStudents() {
 		String jpqlQuery = "SELECT s FROM Student s";
+		beginTransaction();
 		List<Student> studentsList = manager.createQuery(jpqlQuery).getResultList();
+		commitTransaction();
 		return studentsList;
 	}
 	

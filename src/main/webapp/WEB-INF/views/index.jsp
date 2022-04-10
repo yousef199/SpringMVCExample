@@ -20,7 +20,7 @@ margin-bottom: 40px;
 <body>
 	<form action="/SpringMVCExample/Student/getStudents" id = "showStudents"></form>
 	<div class = "form-group">
-	<form action="/SpringMVCExample/Student/addStudent" method="get" id = "addStudent">
+	<form action="/SpringMVCExample/Student/addStudent"  id = "addStudent" method = "post">
 		<div class = "col-md-7">
 		<label for ="name" class = "form-label">Enter Name:</label>
 		<input type = "text" name = "name" id = "name" class = "form-control">	<br>	
